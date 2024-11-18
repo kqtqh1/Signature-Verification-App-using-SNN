@@ -1,7 +1,7 @@
 ﻿# Offline Signature Verification App using Siamese Neural Network
  
 ## Overview
-This signature verification app uses a Siamese Neural Network to compare two signatures, with OpenCV handling the image preprocessing. The model was trained on 69,120 sample pairs, and the app was built in Android Studio. 
+This signature verification app uses a Siamese Neural Network to compare two handwritten signatures, with OpenCV handling the image preprocessing. The model was trained on 69,120 sample pairs, and the app was built in Android Studio. 
 
 ## Table of Contents
   - [Overview](#overview)
@@ -23,34 +23,40 @@ The dataset consists of 69,120 handwritten signature sample pairs. These pairs i
 
 ## Preprocessing Techniques
 * Image Resizing
-* Data Augmentation
+* Data Augmentation (Random rotation and brightness)
 * Canny Edge Detection
 * Normalization
 
 ## Performance Evaluation
-The model is trained with over 100 epochs and tested on a 700-sample test dataset. Below are the results of the evaluation:
+The model was trained for over 100 epochs and tested on a 700-sample test dataset. Below are the results of the evaluation:
+- Results on the Training Dataset
 
-* Accuracy: 81.71%
-* Precision: 81.18%
+![Screenshot 2024-11-18 230707](https://github.com/user-attachments/assets/75433bc9-d4d1-41ef-9498-4bad1a9b6ca3)
+![Screenshot 2024-11-18 230740](https://github.com/user-attachments/assets/b07b3b4f-b7ba-4ddb-be9f-f51c430c2a7d)
+
+- Results on the Test Dataset
+* Accuracy: 81.86%
+* Precision: 81.41%
 * Recall: 82.57%
-* F1 Score: 81.87%
+* F1 Score: 81.99%
+
+![12](https://github.com/user-attachments/assets/50c5f362-6e69-4aca-a98a-eb04ce8d9fe5)
 
 ## Setting Up OpenCV in Android Studio
 1. [Install OpenCV SDK (OpenCV – 4.9.0)](https://opencv.org/releases/). Then extract it.
 2. In Android Studio, go to **File > New > Import Module**. Navigate to the location where you extracted the OpenCV SDK, and select the sdk/java folder.
-3. Open **build.gradle.kts(Module:app)** and add **implementation(project(":openCV"))** to the dependencies.
+3. Open **build.gradle.kts(Module:app)** and add **'implementation(project(":openCV"))'** to the dependencies.
 
 ## Adding Tensorflow Lite model in Android Studio
 1. Go to app/src/main and look for the asset folder. If it does not exist, create it.
 2. Copy the **model.tflite** into the assets folder.
-3. Open **build.gradle.kts(Module:app)** and add **this.implementation ("org.tensorflow:tensorflow-lite:2.11.0")** and **this.implementation ("org.tensorflow:tensorflow-lite-select-tf-ops:2.11.0")** to the dependencies.
+3. Open **build.gradle.kts(Module:app)** and add **'this.implementation ("org.tensorflow:tensorflow-lite:2.11.0")'** and **'this.implementation ("org.tensorflow:tensorflow-lite-select-tf-ops:2.11.0")'** to the dependencies.
     
 ## App
 
-![1cc14b2a-c480-45af-9edf-ff3bb52a41f5 (1)](https://github.com/user-attachments/assets/d08565b8-5e8b-4ff9-add3-d5b2a626343a)
-![0ebb5911-4ba8-467e-87fc-d34a80c53975](https://github.com/user-attachments/assets/649e0a1d-fe86-48e6-97d0-0ef96f116bff)
+![1cc14b2a-c480-45af-9edf-ff3bb52a41f5 (1)](https://github.com/user-attachments/assets/842394be-ba8b-4f97-96cd-5bc16bd8cfcd)  ![0ebb5911-4ba8-467e-87fc-d34a80c53975](https://github.com/user-attachments/assets/d7c795aa-2fd9-43ea-8ab9-04e3b839d618)
 
 ## License
-
+This project is licensed under the MIT License. For more information, refer to the [LICENSE](LICENSE) file.
 
 
