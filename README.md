@@ -29,16 +29,17 @@ The dataset consists of 69,120 handwritten signature sample pairs. These pairs i
 
 ## Performance Evaluation
 The model was trained for over 100 epochs and tested on a 700-sample test dataset. Below are the results of the evaluation:
-- Results on the Training Dataset
+
+* Results on the Training Dataset
 
 ![Screenshot 2024-11-18 230707](https://github.com/user-attachments/assets/75433bc9-d4d1-41ef-9498-4bad1a9b6ca3)
 ![Screenshot 2024-11-18 230740](https://github.com/user-attachments/assets/b07b3b4f-b7ba-4ddb-be9f-f51c430c2a7d)
 
 * Results on the Test Dataset
- - Accuracy: 81.86%
- - Precision: 81.41%
- - Recall: 82.57%
- - F1 Score: 81.99%
+  - Accuracy: 81.86%
+  - Precision: 81.41%
+  - Recall: 82.57%
+  - F1 Score: 81.99%
 
 ![12](https://github.com/user-attachments/assets/50c5f362-6e69-4aca-a98a-eb04ce8d9fe5)
 
