@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Signature Verification</string>
+    <string name="real_signature">Real Signature</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="select_image">Select Image</string>
+    <string name="signature_to_compare">Signature to Compare</string>
+    <string name="verify">Verify</string>
+    <string name="result">Result</string>
+    <string name="note">Note: VeriFake may not be highly accurate. Use the results with caution and verify with other methods when needed.</string>
+    <string name="reset">Reset</string>
+    <string name="img1">img</string>
+    <string name="img2">img2</string>
+    <string name="verifake">VeriFake</string>
+</resources>

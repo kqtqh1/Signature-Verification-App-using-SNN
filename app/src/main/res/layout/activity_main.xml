@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f2f3"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="66dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="55dp"
+                    app:cardCornerRadius="25dp"
+                    android:paddingBottom="20dp"
+                    android:background="@drawable/bg">
+
+                    <TextView
+                        android:id="@+id/realTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/alata"
+                        android:text="@string/real_signature"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="170dp"
+                        android:background="@drawable/image_bg"
+                        android:clipToOutline="true"
+                        android:contentDescription="@string/img1"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintDimensionRatio="1:0.9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/realTv" />
+
+
+                    <Button
+                        android:id="@+id/capture1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/border"
+                        android:fontFamily="@font/alata"
+                        android:textColor="@color/Light_blue"
+                        android:text="@string/take_photo"
+                        android:paddingHorizontal="16dp"
+                        android:textSize="15sp"
+                        android:enabled="true"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.467"
+                        app:layout_constraintStart_toEndOf="@+id/image1"
+                        app:layout_constraintTop_toBottomOf="@+id/realTv" />
+
+                    <Button
+                        android:id="@+id/select1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:fontFamily="@font/alata"
+                        android:text="@string/select_image"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/Light_blue"
+                        android:visibility="visible"
+                        android:enabled="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/image1"
+                        app:layout_constraintTop_toBottomOf="@+id/capture1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="32dp"
+                    app:cardCornerRadius="25dp"
+                    android:paddingBottom="20dp"
+                    android:background="@drawable/bg">
+
+                    <TextView
+                        android:id="@+id/compare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/signature_to_compare"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/alata"
+                        android:textColor="@color/dark_blue"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="170dp"
+                        android:background="@drawable/image_bg"
+                        android:contentDescription="@string/img2"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:0.9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/compare" />
+
+
+                    <Button
+                        android:id="@+id/capture2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/border"
+                        android:fontFamily="@font/alata"
+                        android:text="@string/take_photo"
+                        android:paddingHorizontal="16dp"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:visibility="visible"
+                        android:textColor="@color/Light_blue"
+                        android:enabled="true"
+                        app:layout_constraintHorizontal_bias="0.467"
+                        app:layout_constraintStart_toEndOf="@+id/image2"
+                        app:layout_constraintTop_toBottomOf="@+id/compare" />
+
+                    <Button
+                        android:id="@+id/select2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border"
+                        android:fontFamily="@font/alata"
+                        android:text="@string/select_image"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:textColor="@color/Light_blue"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:visibility="visible"
+                        android:enabled="true"
+                        app:layout_constraintStart_toEndOf="@+id/image2"
+                        app:layout_constraintTop_toBottomOf="@+id/capture2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:paddingHorizontal="60dp"
+                android:fontFamily="@font/alata"
+                android:text="@string/verify"
+                android:textSize="18sp"
+                android:visibility="visible"
+                android:enabled="true"
+                android:background="@drawable/radius" />
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:background="@drawable/resultcard"
+                    android:id="@+id/resultCard"
+                    android:layout_marginHorizontal="38dp"
+                    android:layout_marginTop="30dp"
+                    android:visibility="invisible"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="25dp">
+
+                    <TextView
+                        android:id="@+id/result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aoboshi_one"
+                        android:gravity="center"
+                        android:text="@string/result"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:textColor="@color/white"
+                        android:textSize="28sp"
+                        android:fontFamily="@font/aoboshi_one"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+                    <FrameLayout
+                        android:id="@+id/progBarCont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:background="@drawable/image_bg"
+                        app:layout_constraintTop_toBottomOf="@id/tvResult"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="16dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:max="100"
+                            android:visibility="invisible"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/progress_bar"
+                            android:layout_gravity="start" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey"
+                        android:layout_margin="15dp"
+                        android:text="@string/note"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/progBarCont"
+                        tools:ignore="SmallSp" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:paddingHorizontal="60dp"
+                android:fontFamily="@font/alata"
+                android:text="@string/reset"
+                android:textSize="18sp"
+                android:visibility="invisible"
+                android:background="@drawable/radius" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
