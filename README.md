@@ -1,7 +1,7 @@
 ﻿# Offline Signature Verification App using Siamese Neural Network
  
 ## Overview
-This signature verification app uses a Siamese Neural Network to compare two handwritten signatures, with OpenCV handling the image preprocessing. The model was trained on 69,120 sample pairs, and the app was built in Android Studio. 
+This signature verification app uses a Siamese Neural Network to compare two handwritten signatures, with OpenCV handling the image preprocessing. The model was trained on 68,832 sample pairs, and the app was built in Android Studio. 
 
 ## Table of Contents
   - [Overview](#overview)
@@ -14,7 +14,7 @@ This signature verification app uses a Siamese Neural Network to compare two han
   - [License](#License)
 
 ## Dataset
-The dataset consists of 69,120 handwritten signature sample pairs. These pairs include both genuine and forged signatures. The signatures in the dataset are extracted from two primary sources:
+The dataset consists of 68,832 handwritten signature sample pairs. These pairs include both genuine and forged signatures. The signatures in the dataset are extracted from two primary sources:
 * [ICDAR 2011 Signature Dataset](https://www.kaggle.com/datasets/robinreni/signature-verification-dataset/data)
 * Custom Dataset - Additional signatures collected specifically for this project to increase the diversity of the model.
 * Data Labeling
@@ -44,7 +44,7 @@ The model was trained for over 100 epochs and tested on a 700-sample test datase
 ![12](https://github.com/user-attachments/assets/50c5f362-6e69-4aca-a98a-eb04ce8d9fe5)
 
 ## Setting Up OpenCV in Android Studio
-1. [Install OpenCV SDK (OpenCV – 4.9.0)](https://opencv.org/releases/). Then extract it.
+1. Install [OpenCV SDK (OpenCV – 4.9.0)](https://opencv.org/releases/). Then extract it.
 2. In Android Studio, go to **File > New > Import Module**. Navigate to the location where you extracted the OpenCV SDK, and select the sdk/java folder.
 3. Open **build.gradle.kts(Module:app)** and add **'implementation(project(":openCV"))'** to the dependencies.
 
